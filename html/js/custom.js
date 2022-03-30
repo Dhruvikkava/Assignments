@@ -184,3 +184,12 @@ $(document).ready(function(){
       $(".up-arrow").toggleClass("up-arrow-rotate");
     });
 });
+
+$(document).on('click', '.sub-nav ul li a', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top - 120
+    }, 500);
+});
+

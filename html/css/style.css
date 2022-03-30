@@ -102,7 +102,7 @@ footer ul li a:hover,footer ul li a:focus{color:#28afc1}
 .tred-project-wrap,.destination-wrap,.project-wrapper{padding:40px 0 26px}
 h2.heading{font-weight: bold;margin:0 0 17px 0;color: #28afc1;}
 .trending-project{margin:0 -10px}
-.trending-project .slick-arrow{position: absolute;z-index: 1;top:50%;width:72px}
+.trending-project .slick-arrow{position: absolute;z-index: 1;top:50%;width:72px;height: 72px;}
 .trending-project .slick-arrow:hover{cursor: pointer;}
 .trending-project .a-right{right:-16px;transform:translateY(-50%) rotate(-90deg);}
 .trending-project .a-left{left: -16px;transform:translateY(-50%) rotate(90deg) ;}
@@ -120,7 +120,7 @@ h2.heading{font-weight: bold;margin:0 0 17px 0;color: #28afc1;}
 .trending-project .slick-arrow[aria-disabled="true"]{display: none !important;}
 
 .feature-destination{margin:0 -10px;}
-.feature-destination .slick-arrow{position: absolute;z-index: 1;top:50%;width:70px}
+.feature-destination .slick-arrow{position: absolute;z-index: 1;top:50%;width:70px;height: 70px;}
 .feature-destination .slick-arrow:hover{cursor: pointer;}
 .feature-destination .a-right{right:-14px;transform:translateY(-50%) rotate(-90deg);}
 .feature-destination .a-left{left: -14px;transform:translateY(-50%) rotate(90deg) ;}
@@ -137,7 +137,7 @@ h2.heading{font-weight: bold;margin:0 0 17px 0;color: #28afc1;}
 .feature-content h3{color:#FFFFFF;text-transform: uppercase;margin: 0px 0 15px 0;font-weight: normal;font-size: 18px;}
 
 .other-project{margin:0 -10px}
-.other-project .slick-arrow{position: absolute;z-index: 1;top:41%;width: 72px;}
+.other-project .slick-arrow{position: absolute;z-index: 1;top:41%;width: 72px;height: 72px;}
 .other-project .slick-arrow:hover{cursor: pointer;}
 .other-project .a-right{right:-14px;transform:translateY(-50%) rotate(-90deg);}
 .other-project .a-left{left: -14px;transform:translateY(-50%) rotate(90deg) ;}
@@ -259,7 +259,7 @@ h2.heading{font-weight: bold;margin:0 0 17px 0;color: #28afc1;}
 .date-slider .next{right:18px;}
 .date-slider .slick-disabled{display: none !important;}
 
-.project-right{flex:0 0 33.3%;max-width: 33.3%;padding:0 15px;position: relative;}
+.project-right{flex:0 0 33.3%;max-width: 33.3%;padding:0 15px;position: sticky;top:87px;}
 .project-right .apply-btn{display: none;}
 .date-section{padding:24px 30px 20px 30px;background-color: #28afc1;}
 .date-section span.text{display: flex;align-items: center;padding:2px 7px 3px 11px;background-color: #ffffff3f;text-transform: none;max-width: 281px;margin-bottom: 11px;}
@@ -278,6 +278,8 @@ h2.heading{font-weight: bold;margin:0 0 17px 0;color: #28afc1;}
 .date-section .select2-container--open .select2-selection__arrow{transform: rotate(180deg);}
 .date-section .select2-container--default .select2-selection--single .select2-selection__arrow b{display: none;}
 .date-section .select2-container .select2-selection--single{height: auto;}
+.datepicker td, .datepicker th{padding:5px 7px;}
+.datepicker table tr td.active.active, .datepicker table tr td.active.disabled.active, .datepicker table tr td.active.disabled:active, .datepicker table tr td.active.disabled:hover.active, .datepicker table tr td.active.disabled:hover:active, .datepicker table tr td.active:active, .datepicker table tr td.active:hover.active, .datepicker table tr td.active:hover:active{background-color: #e53b51;z-index: 1;}
 .apply-now{text-align: center;width:100%;border:none;border-radius: 5px;color:#FFFFFF;background-color: #e53b51;padding:13px 0;margin:0px 0 10px 0;}
 .apply-now:focus{outline: none;}
 .apply-now:hover{background-color: #a53241e6;}
@@ -288,3 +290,27 @@ h2.heading{font-weight: bold;margin:0 0 17px 0;color: #28afc1;}
 #date-placeholder::-webkit-input-placeholder{color:#4f4f4f;font-size: 19px;}
 #date-placeholder::-moz-placeholder{color:#4f4f4f;font-size: 19px;}
 #date-placeholder::-o-placeholder{color:#4f4f4f;font-size: 19px;}
+
+
+/* Comtact Page 
+--------------------------------------------------------------------------------------------------------*/
+
+/* Banner 
+--------------------------------------------------------------------------------------------------------*/
+.contact-banner{min-height: 400px;background-image: url('../images/contact-banner.jpg');background-size: cover;background-repeat: no-repeat;background-position: center;padding-top: 95px;display: flex;justify-content: center;align-items: center;position: relative;}
+.contact-banner::before{content: "";position: absolute;top:0;left: 0;width:100%;height: 100%;background: linear-gradient(to bottom,transparent,#181717f0);z-index: 1;}
+.contact-banner h1{color:#FFFFFF;z-index: 2;}
+
+/* Main Content 
+--------------------------------------------------------------------------------------------------------*/
+.contact-section{padding:55px 0 88px;}
+.contact-container{padding:0 15px;max-width: 1770px;margin:0 auto}
+.contact-text{font-size: 19px;line-height: 32px;margin-bottom: 23px;color:#646464}
+
+.contact-form{max-width:920px;margin: 0 auto;padding-top: 23px;}
+.contact-form form{display: flex;flex-wrap: wrap;margin:0 -7px;}
+.contact-form form .input-wrap{flex:0 0 50%;max-width: 50%;padding:8px 7px}
+.input-wrap .input-text{padding:10px 18px;font-size: 18px;width:100%;border:1px solid #4f4f4f}
+.contact-form form .textarea-wrap{flex:0 0 100%;max-width: 100%;padding:8px 7px}
+.textarea-wrap .text-area{width:100%;padding:10px 18px;height: 295px;display: flex;font-size: 18px;border:1px solid #4f4f4f;justify-content: center;align-items: center;}
+.contact-form form .send-btn{margin:7px auto;font-size: 18px;padding:10px 40px 12px 40px;background-color: #e53b51;border:none;color:#FFFFFF;border-radius: 3px;font-weight: bold;}
