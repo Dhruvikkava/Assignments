@@ -138,14 +138,14 @@
 /* Contact Page 
 --------------------------------------------------------------------------------------------------------*/
     .contact-banner{min-height: 535px;padding-top: 125px;}
-    .contact-section{padding:40px 20px 88px 20px;}
+    .contact-section{padding:40px 20px 99px 20px;}
     .contact-text{font-size: 24px;line-height: 39px;}
-    .contact-form{padding-top: 12px;max-width: 100%;padding-bottom: 100px;}
-    .input-wrap .input-text{padding:15px 26px 14px 26px;font-size: 24px;}
-    .contact-form form .input-wrap{padding:10px 7px}
-    .contact-form form .textarea-wrap{padding:10px 7px;}
-    .textarea-wrap .text-area{height: 418px;}
-    .contact-form form .send-btn{margin:11px auto;padding:17px 55px;font-size: 21px;}
+    .contact-form{padding-top: 23px;max-width: 100%;padding-bottom: 100px;}
+    .form-group .input-text{padding:14px 25px;font-size: 24px;}
+    .grid-input .form-group{margin-bottom: 20px;}
+    .grid-textarea .form-group{margin-bottom: 21px;}
+    .grid-textarea .form-group .text-area{min-height: 418px;padding: 14px 25px;font-size: 24px;}
+    .contact-form form .send-btn{margin:0px auto;padding:17px 55px;font-size: 21px;}
 }
 
 @media(max-width:991px){
@@ -257,10 +257,11 @@
 
 /* Project Page
 --------------------------------------------------------------------------------------------------------*/
-    .contact-form form .input-wrap{padding: 6px 7px;flex:0 0 100%;max-width: 100%;}
-    .contact-form{padding-top: 16px;}
-    .textarea-wrap .text-area{padding:15px 26px;font-size: 23px;height: 307px;}
-    .contact-form form .textarea-wrap{padding:7px;}
+    .contact-form{padding-top: 23px;}
+    .grid-input .form-group{margin-bottom: 13px;}
+    .form-group .input-text{padding:13px 25px;font-size: 23px;}
+    .grid-textarea .form-group{margin-bottom: 28px;}
+    .grid-textarea .form-group .text-area{min-height: 308px;padding:15px 25px;font-size: 23px;}
 }
 
 @media(max-width:480px){
@@ -389,9 +390,8 @@
 --------------------------------------------------------------------------------------------------------*/
     .contact-banner{min-height: 385px;}
     .contact-text{font-size: 17px;line-height: 29px;margin:0}
-    .contact-section{padding:17px 13px 99px 13px;}
-    .input-wrap .input-text{font-size: 23px;padding:15px 26px 12px 26px;}    
-    .contact-form form .send-btn{width:100%;padding:17px 0;margin:21px 7px;}
+    .contact-section{padding:17px 13px 119px 13px;}    
+    .contact-form form .send-btn{width:100%;padding:17px 0;margin:0 7px;}
     .contact-banner h1{font-size: 40px;}
 }
 
@@ -427,5 +427,5 @@
 --------------------------------------------------------------------------------------------------------*/
     .contact-section{padding:17px 0 50px 0;}
     .contact-banner h1{font-size: 31px;}
-    .input-wrap .input-text,.textarea-wrap .text-area{font-size: 20px;}
+    .form-group .input-text,.grid-textarea .form-group .text-area{font-size: 20px;padding-left: 15px;padding-right: 15px;}
 }
