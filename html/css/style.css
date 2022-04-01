@@ -43,7 +43,7 @@ button,button:hover,input,textarea{transition: all 0.3s linear;-webkit-transitio
 .header-wrapper{padding:0 49px;position: fixed;top:0;width:100%;z-index: 5;}
 .header-wrapper .header{display: flex;flex-wrap: wrap;align-items: center;justify-content: space-between;padding:15px 0px 17px 0;border-bottom: 1px solid #FFFFFF;transition: all 0.3s linear;-webkit-transition: all 0.3s linear;-moz-transition: all 0.3s linear;-o-transition: all 0.3s linear;}
 .header-wrapper.active{background-color:#FFFFFF;box-shadow: 0px 2px 7px 2px #111111c4;}
-.header-wrapper.active .header{border:none;padding:12px 0}
+.header-wrapper.active .header{border:none;}
 .header-wrapper.active .header .header-left ul li a{color:#28afc1;}
 .header-wrapper.active .header .header-left ul li a:hover,.header-wrapper.active .header .header-left ul li a:focus{color:#e53b51}
 .header-wrapper.active .header .login-btn{border:1px solid #28afc1;color:#28afc1;}
@@ -341,6 +341,29 @@ h2.heading{font-weight: bold;margin:0 0 17px 0;color: #28afc1;}
 .accordian-btn{padding:34px 70px 34px 12px;position: relative;background-color: #FFFFFF;font-size: 29px;color:#28afc1;font-weight: bold;white-space:normal;}
 .accordian-btn.collapsed > em .faq-arrow{transform:translateY(-50%) rotate(0deg);}
 .accordian-btn em .faq-arrow{position: absolute;right:15px;top:50%;transform:translateY(-50%) rotate(180deg) ;width:40px;height: 40px;transition: all 0.3s linear;-webkit-transition: all 0.3s linear;-moz-transition: all 0.3s linear;-o-transition: all 0.3s linear;}
-.accordian-btn:hover{text-decoration: none;color: #28afc1;background-color: #FFFFFF;}
+.accordian-btn:hover,.accordian-btn:focus{text-decoration: none;color: #28afc1;background-color: #FFFFFF;}
 .accordian-text{padding:20px 15px;font-size: 21px;color: #8c8c8c;}
 .accordian-text p{margin-bottom: 12px;}
+
+
+/* Research-request page
+--------------------------------------------------------------------------------------------------------*/
+
+/* Header
+--------------------------------------------------------------------------------------------------------*/
+.header-wrapper.filter-active{background-color:#FFFFFF;box-shadow: 0px 2px 7px 2px #111111c4;}
+.header-wrapper.filter-active .header{border:none;}
+.header-wrapper.filter-active .header .header-left ul li a{color:#28afc1;}
+.header-wrapper.filter-active .header .header-left ul li a:hover,.header-wrapper.filter-active .header .header-left ul li a:focus{color:#e53b51}
+.header-wrapper.filter-active .header .login-btn{border:1px solid #28afc1;color:#28afc1;}
+.header-wrapper.filter-active .header .login-btn:hover,.header-wrapper.active .header .login-btn:focus{color:#FFFFFF;border:1px solid #28afc1}
+
+
+/* Main Content
+--------------------------------------------------------------------------------------------------------*/
+.filter-container{max-width: 1672px;margin:0 auto;padding:0 15px;}
+.filter-container.inner{margin-top: 95px;}
+
+.filter-section{padding:26px 0;display: flex;align-items: center;flex-wrap: wrap;}
+.cause{flex:0 0 27.28%;max-width: 27.28%;}
+.cause h5{font-size: 12px;color: #28afc1;margin-bottom: 26px;}
