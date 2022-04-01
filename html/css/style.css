@@ -322,3 +322,25 @@ h2.heading{font-weight: bold;margin:0 0 17px 0;color: #28afc1;}
 .grid-textarea .form-group .text-area{min-height: 295px;border:1px solid #8c8c8c;border-radius: 0px;font-size: 18px;padding:11px 19px;}
 .contact-form form .send-btn{margin:0px auto;font-size: 18px;padding:10px 40px 12px 40px;background-color: #e53b51;border:none;color:#FFFFFF;border-radius: 3px;font-weight: bold;transition:all 0.3s linear;-o-transition:all 0.3s linear;-ms-transition:all 0.3s linear;-moz-transition:all 0.3s linear;-webkit-transition:all 0.3s linear;}
 .contact-form form .send-btn:hover,.contact-form form .send-btn:focus{background-color:#a53241e6;}
+
+
+/* Faq page
+--------------------------------------------------------------------------------------------------------*/
+
+/* Banner
+--------------------------------------------------------------------------------------------------------*/
+.faq-banner{min-height: 400px;padding-top: 95px;background-image: url("../images/faq-banner.jpg");background-size: cover;background-position: center;background-repeat: no-repeat;display: flex;justify-content: center;align-items: center;position: relative;}
+.faq-banner::before{content: "";position: absolute;top:0;left: 0;width:100%;height: 100%;background: linear-gradient(to bottom,transparent,#181717f0);z-index: 1;}
+.faq-banner h1{color: #FFFFFF;z-index: 2;}
+
+/* Main Content
+--------------------------------------------------------------------------------------------------------*/
+.faq-container{max-width:1200px;margin:0 auto;padding:0 15px;}
+.faq-accordian .card{border: none;border-bottom: 1px solid #4a4848;border-radius: 0px;}
+.card .card-header{border-bottom: 0px;padding:0}
+.accordian-btn{padding:34px 70px 34px 12px;position: relative;background-color: #FFFFFF;font-size: 29px;color:#28afc1;font-weight: bold;white-space:normal;}
+.accordian-btn.collapsed > em .faq-arrow{transform:translateY(-50%) rotate(0deg);}
+.accordian-btn em .faq-arrow{position: absolute;right:15px;top:50%;transform:translateY(-50%) rotate(180deg) ;width:40px;height: 40px;transition: all 0.3s linear;-webkit-transition: all 0.3s linear;-moz-transition: all 0.3s linear;-o-transition: all 0.3s linear;}
+.accordian-btn:hover{text-decoration: none;color: #28afc1;background-color: #FFFFFF;}
+.accordian-text{padding:20px 15px;font-size: 21px;color: #8c8c8c;}
+.accordian-text p{margin-bottom: 12px;}

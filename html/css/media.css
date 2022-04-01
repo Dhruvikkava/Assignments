@@ -146,6 +146,13 @@
     .grid-textarea .form-group{margin-bottom: 21px;}
     .grid-textarea .form-group .text-area{min-height: 418px;padding: 14px 25px;font-size: 24px;}
     .contact-form form .send-btn{margin:0px auto;padding:17px 55px;font-size: 21px;}
+
+/* Home Page
+--------------------------------------------------------------------------------------------------------*/
+    .faq-banner{min-height: 535px;padding-top: 125px;}
+    .accordian-btn{padding:23px 80px 23px 12px}
+    .accordian-text{padding:10px 15px}
+    .accordian-btn em .faq-arrow{right:21px;width:46px;height: 46px;}
 }
 
 @media(max-width:991px){
@@ -155,7 +162,9 @@
     .banner-block .select2-container--default .select2-selection--single .select2-selection__rendered{font-size: 21px;padding:28px 12px 28px 0;}
     .banner-block .banner-select p,.banner-block input[type="button"]{font-size: 21px;padding:28px 0;}
     .banner-block .select2-container{height: 82px;}
-
+/* Faq Page
+--------------------------------------------------------------------------------------------------------*/
+    .accordian-btn br{display: none;}
 }
 
 @media(max-width:767px){
@@ -177,7 +186,7 @@
     .header .header-left a img{height: 55px;width:195px;}
     .header-wrapper{padding: 0;}
     .header-wrapper .header{padding:20px 90px 20px 30px}
-    .header .bars{display: block;position: absolute;padding:5px;right: 23px;border:1px solid transparent;z-index: 2;}
+    .header .bars{display: block;position: absolute;padding:5px;right: 23px;border:1px solid transparent;z-index: 2;top:50%;transform: translateY(-50%);}
     .header .bars:hover,.header .bars:focus{cursor:pointer;}
     .header .bars .bar{width:35px;height: 4px;background-color: #FFFFFF;margin-bottom: 6px;}
     .header .bars .bar:last-child{margin: 0;}
@@ -393,6 +402,13 @@
     .contact-section{padding:17px 13px 119px 13px;}    
     .contact-form form .send-btn{width:100%;padding:17px 0;margin:0 7px;}
     .contact-banner h1{font-size: 40px;}
+
+/* Faq Page
+--------------------------------------------------------------------------------------------------------*/
+    .faq-banner{min-height: 383px;padding-top: 107px;}
+    .accordian-btn{padding-left: 2px;font-size: 23px;line-height: 33px;padding-right: 52px;}
+    .accordian-text{font-size: 17px;padding: 5px 15px;}
+    .accordian-btn em .faq-arrow{right: 3px;width:43px;height: 43px;}
 }
 
 @media(max-width:400px){
@@ -428,4 +444,9 @@
     .contact-section{padding:17px 0 50px 0;}
     .contact-banner h1{font-size: 31px;}
     .form-group .input-text,.grid-textarea .form-group .text-area{font-size: 20px;padding-left: 15px;padding-right: 15px;}
+
+    /* Contact Page
+--------------------------------------------------------------------------------------------------------*/
+    .accordian-btn{font-size: 22px;}
+    .accordian-text{font-size: 16px;padding:0 12px}
 }
