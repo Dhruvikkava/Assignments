@@ -20,7 +20,7 @@
                     </ul>
                 </div>
                 <input type="button" class="login-btn" value="Login" title="Login">
-                <div class="bars" onclick="document.body.classList.toggle('navbar-toggle')">
+                <div class="filter-bar bars " onclick="document.body.classList.toggle('navbar-toggle')">
                     <div class="bar"></div>
                     <div class="bar"></div>
                     <div class="bar"></div>
@@ -31,18 +31,964 @@
         <!-- header end  -->
 
         <!-- Main Content start  -->
-        
+        <div class="filter-section">
         <div class="filter-container inner">
-            <section class="filter-section ">
+            <section class="filter-wrap ">
                 <div class="cause">
-                    <h5>Cause</h5>
+                    <h5 class="filter-heading">Cause</h5>
                     <div class="cause-inner">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label cause-text" for="customCheck1">Volunteer</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck2">
+                            <label class="custom-control-label cause-text" for="customCheck2">Teach</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck3">
+                            <label class="custom-control-label cause-text" for="customCheck3">Intern</label>
+                        </div>
                     </div>
                 </div>
+                
+                <div class="country">
+                    <h5 class="filter-heading">Country</h5>
+                    <select class="js-example-basic-single filter-select" name="country">
+                        <option value="AL">Search Country</option>                          
+                        <option value="WY">India</option>
+                        <option value="As">Australia</option>
+                    </select>
+                </div>
+
+                <div class="country activity">
+                    <h5 class="filter-heading">Activity</h5>
+                    <select class="js-example-basic-single filter-select" name="country">
+                        <option value="AL">Animal Conversation</option>                          
+                        <option value="WY">India</option>
+                        <option value="As">Australia</option>
+                    </select>
+                </div>
+
+                <!-- mobile size edit section start  -->
+                <div class="edit-content">
+                    <h3>Volunteer <span>in</span>  Cambodia <span>for</span> Animal Conservation</h3>
+                    <div class="edit-icon"><img src="./images/edit-icon.png" alt="edit-icon"></div>
+                </div>
+                <div class="bg-white-block"></div>
+                <div class="bg-overlay"></div>
+                <!-- mobile size edit section end  -->
+
+                <button title="More Filters" class="btn more-filter" id="toggle-btn"><span class="text">More filters</span><span class="text-dots">...</span> <span class="badge filter-badge">4</span></button>
+                
             </section>
-        </div>
+        </div>        
+        </div>     
         
+        <div class="filter-content-wrap">
+        <div class="filter-container">
+
+            <!-- toggle-content start -->
+            <div class="toggle-content" id="toggle-content">                                   
+                <div class="filter-container">
+                    <div class="row toggle-block">
+                        <div class="col-xl-4 col-md-12 col-block column">
+                            <div class="toggle-heading">
+                                <h3>Start date (range)</h3>
+                                <a href="#" title="Reset">Reset</a>
+                            </div>
+                            <div class="row date-block ">
+                                <div class="col-4 col-md-4">
+                                    <select class="js-example-basic-single month" name="state">
+                                        <option value="WY">month</option>
+                                        <option value="AL">January</option>                                          
+                                        <option value="WY">February</option>
+                                        <option value="WY">March</option>
+                                        <option value="WY">April</option>
+                                        <option value="WY">May</option>
+                                        <option value="WY">June</option>
+                                        <option value="WY">July</option>
+                                        <option value="WY">August</option>
+                                        <option value="WY">September</option>
+                                        <option value="WY">October</option>
+                                        <option value="WY">November</option>
+                                        <option value="WY">December</option>
+                                    </select>
+                                </div>
+                                <div class="col-4 col-md-4">
+                                    <select class="js-example-basic-single date" name="state">
+                                        <option value="WY">dd</option>
+                                        <option value="WY">1</option>
+                                        <option value="WY">2</option>
+                                        <option value="WY">3</option>
+                                        <option value="WY">4</option>
+                                        <option value="WY">5</option>
+                                        <option value="WY">6</option>
+                                        <option value="WY">7</option>
+                                        <option value="WY">8</option>
+                                        <option value="WY">9</option>
+                                    </select>
+                                </div>
+                                <div class="col-4 col-md-4">
+                                    <select class="js-example-basic-single year" name="state">
+                                        <option value="WY">yyyy</option>
+                                        <option value="WY">2020</option>
+                                        <option value="WY">2021</option>
+                                        <option value="WY">2022</option>
+                                        <option value="WY">2023</option>
+                                        <option value="WY">2024</option>
+                                        <option value="WY">2025</option>
+                                        <option value="WY">2026</option>
+                                        <option value="WY">2027</option>
+                                        <option value="WY">2028</option>
+                                    </select>
+                                </div>                                
+                            </div>
+                            <div class="row date-block ">
+                                <div class="col-4 col-md-4">
+                                    <select class="js-example-basic-single month" name="state">
+                                        <option value="WY">month</option>
+                                        <option value="AL">January</option>                                          
+                                        <option value="WY">February</option>
+                                        <option value="WY">March</option>
+                                        <option value="WY">April</option>
+                                        <option value="WY">May</option>
+                                        <option value="WY">June</option>
+                                        <option value="WY">July</option>
+                                        <option value="WY">August</option>
+                                        <option value="WY">September</option>
+                                        <option value="WY">October</option>
+                                        <option value="WY">November</option>
+                                        <option value="WY">December</option>
+                                    </select>
+                                </div>
+                                <div class="col-4 col-md-4">
+                                    <select class="js-example-basic-single date" name="state">
+                                        <option value="WY">dd</option>
+                                        <option value="WY">1</option>
+                                        <option value="WY">2</option>
+                                        <option value="WY">3</option>
+                                        <option value="WY">4</option>
+                                        <option value="WY">5</option>
+                                        <option value="WY">6</option>
+                                        <option value="WY">7</option>
+                                        <option value="WY">8</option>
+                                        <option value="WY">9</option>
+                                    </select>
+                                </div>
+                                <div class="col-4 col-md-4">
+                                    <select class="js-example-basic-single year" name="state">
+                                        <option value="WY">yyyy</option>
+                                        <option value="WY">2020</option>
+                                        <option value="WY">2021</option>
+                                        <option value="WY">2022</option>
+                                        <option value="WY">2023</option>
+                                        <option value="WY">2024</option>
+                                        <option value="WY">2025</option>
+                                        <option value="WY">2026</option>
+                                        <option value="WY">2027</option>
+                                        <option value="WY">2028</option>
+                                    </select>
+                                </div>                                
+                            </div>
+                        </div>
+
+                        <div class="col-xl-4 col-md-12 col-block column">
+                            <div class="toggle-heading">
+                                <h3>Duration</h3>
+                                <a href="#" title="Reset">Reset</a>
+                            </div>
+                            <h4 class="slider-range-value"><input type="text" class="input-with-keypress-0">week - <input type="text" class="input-with-keypress-1">weeks</h4>
+                            <div class="slider-keypress"></div>                          
+                        </div>
+
+                        <div class="col-xl-4 col-md-12 column">
+                            <div class="toggle-heading">
+                                <h3>Minimun Age:</h3>
+                            </div>
+                            <div class="date-block age">
+                                <select class="js-example-basic-single date" name="state">
+                                    <option value="WY">--</option>
+                                    <option value="WY">11</option>
+                                    <option value="WY">12</option>
+                                    <option value="WY">13</option>
+                                    <option value="WY">14</option>
+                                    <option value="WY">15</option>
+                                    <option value="WY">16</option>
+                                    <option value="WY">17</option>
+                                    <option value="WY">18</option>
+                                    <option value="WY">19</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="result-btn btn" title="See results">See results</button>
+                </div>        
+            </div>
+            <div class="toggle-overlay"></div>
+            <span class="close-icon"><img src="./images/cross.png" alt="cross-image"></span> 
+            <!-- toggle-content end -->         
+
+            <div class="filter-head">
+                <h2>329 Results</h2>
+                <div class="sorting">
+                    <p class="text">Sort by:</p>
+                    <select class="js-example-basic-single sort-select" name="country">
+                        <option value="AL">Relevency</option>                          
+                        <option value="WY">India</option>
+                        <option value="As">Australia</option>
+                    </select>
+                </div>
+            </div>
+            <div class="filter-content">
+                <!-- first row start  -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="filter-slider">
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo01.jpg" alt="filter-image">
+                                    <span class="img-text">Medical Volunteering</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo01.jpg" alt="filter-image">
+                                    <span class="img-text">Medical Volunteering</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo01.jpg" alt="filter-image">
+                                    <span class="img-text">Medical Volunteering</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="filter-slider middle">
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Lorem Ipsum</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Lorem Ipsum</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Lorem Ipsum</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="filter-slider">
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo03.jpg" alt="filter-image">
+                                    <span class="img-text">Dolor Sit</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo03.jpg" alt="filter-image">
+                                    <span class="img-text">Dolor Sit</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo03.jpg" alt="filter-image">
+                                    <span class="img-text">Dolor Sit</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- first row end  -->
+
+                <!-- second row start  -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="filter-slider">
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Lorem Ipsum</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Lorem Ipsum</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Lorem Ipsum</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="filter-slider middle">
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Lorem Ipsum</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Lorem Ipsum</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Lorem Ipsum</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="filter-slider">
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Lorem Ipsum</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Lorem Ipsum</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Lorem Ipsum</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- second row end  -->
+
+                <!-- third row start  -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="filter-slider">
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Medical Volunteering</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Medical Volunteering</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Medical Volunteering</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="filter-slider middle">
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Lorem Ipsum</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Lorem Ipsum</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Lorem Ipsum</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="filter-slider">
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Dolor Sit</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Dolor Sit</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Dolor Sit</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- third row end  -->
+
+                <!-- forth row start  -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="filter-slider">
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Medical Volunteering</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Medical Volunteering</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Medical Volunteering</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="filter-slider middle">
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Lorem Ipsum</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Lorem Ipsum</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Lorem Ipsum</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="filter-slider">
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Dolor Sit</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Dolor Sit</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Dolor Sit</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- forth row end  -->
+
+                <!-- fifth row start  -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="filter-slider">
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Medical Volunteering</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Medical Volunteering</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Medical Volunteering</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="filter-slider middle">
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Lorem Ipsum</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Lorem Ipsum</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo02.jpg" alt="filter-image">
+                                    <span class="img-text">Lorem Ipsum</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="filter-slider">
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo04.jpg" alt="filter-image">
+                                    <span class="img-text">Amet</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo04.jpg" alt="filter-image">
+                                    <span class="img-text">Amet</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="image-wrap">
+                                    <img src="./images/photo04.jpg" alt="filter-image">
+                                    <span class="img-text">Amet</span>
+                                </div>
+                                <div class="content">
+                                    <h3>Volunteer With Tigers</h3>
+                                    <div class="filter-details">
+                                        <em><img src="./images/volunteer-logo01.png" alt="volunteer-logo"></em>
+                                        <p>Love Volunteers</p>
+                                    </div>
+                                    <span>$215/week</span><span class="dot">.</span><span>1--12 weeks duration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- fifth row end  -->
+
+                <!-- pagination start  -->                
+                <section aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>                
+                <!-- pagination end  -->
+            </div>
+        </div>
+        </div>
         <!-- Main Content end  -->
     </div>
 

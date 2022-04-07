@@ -193,4 +193,157 @@ $(document).on('click', '.sub-nav ul li a', function (event) {
     }, 500);
 });
 
+$('.filter-slider').slick({
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow:"<img class='a-left control-c prev slick-prev' src='./images/right-white-arrow.png'>",
+    nextArrow:"<img class='a-right control-c next slick-next' src='./images/right-white-arrow.png'>",  
+    responsive: [
+        {
+          breakpoint: 576,
+          settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+        }
+        },
+    ] 
+});
 
+$(document).ready(function(){
+    $("#toggle-btn").click(function(){
+      $("#toggle-content").slideToggle();
+      $(".close-icon").toggle();
+    });
+    $(".toggle-overlay").click(function(){
+        $("#toggle-content").slideToggle();
+        $(".close-icon").toggle();
+    });
+    $(".close-icon").click(function(){
+        $("#toggle-content").slideToggle();
+        $(".toggle-overlay").toggle();
+        $(".close-icon").toggle();
+    });
+});
+$(document).ready(function(){
+    $("#toggle-btn").click(function(){
+      $(".toggle-overlay").toggle();
+    });
+    $(".toggle-overlay").click(function(){
+        $(".toggle-overlay").toggle();
+    });
+});
+
+$(document).ready(function(){
+    var keypressSlider = document.querySelector(".slider-keypress");
+    var input0 = document.querySelector(".input-with-keypress-0");
+    var input1 = document.querySelector(".input-with-keypress-1");
+    var inputs = [input0, input1];
+
+    noUiSlider.create(keypressSlider, {
+    start: [1,10],
+    connect: true,
+    step: 1,
+    range: {
+        min: [1],
+        max: [30]
+    }    
+    });
+   
+
+    keypressSlider.noUiSlider.on("update", function(values, handle) {
+        inputs[handle].value = values[handle];
+      
+        /* begin Listen to keypress on the input */
+        function setSliderHandle(i, value) {
+          var r = [null, null];
+          r[i] = value;
+          keypressSlider.noUiSlider.set(r);
+        }
+      
+        // Listen to keydown events on the input field.
+        inputs.forEach(function(input, handle) {
+          input.addEventListener("change", function() {
+            setSliderHandle(handle, this.value);
+          });
+      
+          input.addEventListener("keydown", function(e) {
+            var values = keypressSlider.noUiSlider.get();
+            var value = Number(values[handle]);
+      
+            // [[handle0_down, handle0_up], [handle1_down, handle1_up]]
+            var steps = keypressSlider.noUiSlider.steps();
+      
+            // [down, up]
+            var step = steps[handle];
+      
+            var position;
+      
+            // 13 is enter,
+            // 38 is key up,
+            // 40 is key down.
+            switch (e.which) {
+              case 13:
+                setSliderHandle(handle, this.value);
+                break;
+      
+              case 38:
+                // Get step to go increase slider value (up)
+                position = step[1];
+      
+                // false = no step is set
+                if (position === false) {
+                  position = 1;
+                }
+      
+                // null = edge of slider
+                if (position !== null) {
+                  setSliderHandle(handle, value + position);
+                }
+      
+                break;
+      
+              case 40:
+                position = step[0];
+      
+                if (position === false) {
+                  position = 1;
+                }
+      
+                if (position !== null) {
+                  setSliderHandle(handle, value - position);
+                }
+      
+                break;
+            }
+          });
+        });
+        /* end Listen to keypress on the input */
+      });
+    
+})
+
+$(document).ready(function(){
+    $(".edit-icon").click(function(){
+        $(".cause").slideToggle();
+        $(".country").slideToggle();
+    });
+    $(".edit-icon").click(function(){
+        $(".bg-white-block").slideToggle();
+    });
+    $(".edit-icon").click(function(){
+        $(".bg-overlay").toggle();
+    });
+
+    $(".bg-overlay").click(function(){
+        $(".cause").slideToggle();
+        $(".country").slideToggle();
+    });
+    $(".bg-overlay").click(function(){
+        $(".bg-white-block").slideToggle();
+    });
+    $(".bg-overlay").click(function(){
+        $(".bg-overlay").toggle();
+    });
+});

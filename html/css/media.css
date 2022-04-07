@@ -5,7 +5,7 @@
     .header-wrapper{padding:0 30px}
 /* project Page
 --------------------------------------------------------------------------------------------------------*/
-    .secondary-container .project-section{margin:0}    
+    .secondary-container .project-content{margin:0}    
 }
 
 @media(max-width:1199px){
@@ -60,7 +60,7 @@
 /* Project Page
 --------------------------------------------------------------------------------------------------------*/
     .secondary-container{padding:0 32px;}
-    .secondary-container .project-section{margin:0;padding-top: 34px;}
+    .secondary-container .project-content{margin:0;padding-top: 34px;}
     .project-banner{min-height: 533px;padding-top: 125px;}
     .project-banner h1{font-size: 48px;}
     .photo-btn{bottom: 27px;right:40px;padding:9px 29px;left:auto}
@@ -147,12 +147,61 @@
     .grid-textarea .form-group .text-area{min-height: 418px;padding: 14px 25px;font-size: 24px;}
     .contact-form form .send-btn{margin:0px auto;padding:17px 55px;font-size: 21px;}
 
-/* Home Page
+/* Faq Page
 --------------------------------------------------------------------------------------------------------*/
     .faq-banner{min-height: 535px;padding-top: 125px;}
     .accordian-btn{padding:23px 80px 23px 12px}
     .accordian-text{padding:10px 15px}
     .accordian-btn em .faq-arrow{right:21px;width:46px;height: 46px;}
+
+/* filter-result Page
+--------------------------------------------------------------------------------------------------------*/
+    .filter-section{margin-top: 124px;}
+    .filter-wrap{padding: 42px 0;}
+    .filter-container{padding:0 33px;}
+    .filter-heading{font-size: 16px;margin-bottom: 20px;}
+    .cause{flex:0 0 32.98%;max-width: 32.98%;}
+    .cause .cause-inner{flex-wrap: wrap;}
+    .cause-inner .custom-control{flex:0 0 50%;max-width: 50%;}
+    .custom-checkbox .custom-control-label::before, .custom-control-label::after{width:26px;height: 26px;}
+    .cause-text{font-size: 21px;padding: 0 0 0 15px;}
+    .country{flex:0 0 29.85%;max-width: 29.85%;padding-right: 40px;}
+    .country .filter-heading{margin-bottom: 16px;}
+    .country .select2-container{height: 65px;}
+    .country .select2-container .select2-selection--single .select2-selection__rendered{padding:17px 30px 16px 22px;font-size: 21px;line-height: 31px;}
+    .more-filter{flex:0 0 7.32%;max-width: 7.32%;padding:0 0 16px 0}
+    .more-filter .text-dots{display: block;font-size: 31px;color: #28afc1;}
+    .more-filter .text{display: none;}
+    .more-filter .filter-badge{top:-16px;right: -12px;width:29px;height: 27px;line-height: 21px;}
+    .sorting .select2-container{height: 38px;}
+    .sorting .select2-container--default .select2-selection--single .select2-selection__rendered{line-height: 36px;padding-right: 41px;font-size: 19px;}
+    .filter-head{padding:26px 0 22px 0;}
+    .filter-head h2{font-size: 21px;}
+    .sorting p.text{padding-right: 8px;font-size: 18px;}
+    .filter-content .row .col-md-4{padding:0 20px;}
+    .filter-slider .image-wrap{height: 295px;margin-bottom: 25px;}
+    .filter-slider .image-wrap .img-text{top:13px;left: 15px;font-size: 15.5px;padding:9px 11px 9px 7px;}
+    .filter-slider .slick-arrow{width:20px;height: 34px;top:130px}
+    .filter-slider .next{right: 15px;}
+    .filter-slider .prev{left: 15px;}
+    .filter-slider .content h3{font-size: 19px;line-height: 19px;margin-bottom: 10px;}
+    .filter-details em{width:29px;height: 29px;}
+    .filter-details p{font-size: 18.5px;padding-left: 8px;}
+    .filter-details{margin-bottom: 8px;}
+    .filter-slider .content span{font-size: 19px;}
+    .filter-slider .content span.dot{padding:0 5px 0 8px;}
+    .filter-content .row{padding:18px 0 32px 0;margin:0 -20px;}
+    .pagination .page-item .page-link{padding:7px 16px;font-size: 20px;}
+    .filter-content{padding-bottom: 40px;}
+    /* toggle content  */
+    .toggle-content{width:400px;left: inherit;right: 0;top:-40px;box-shadow: -3px 0px 5px 0px #c4bebe;height: 690px;}
+    .toggle-heading h3, .toggle-heading a{font-size: 16px;}
+    .toggle-content .row.date-block{padding:12px 0;}
+    .date-block .select2-container--default .select2-selection--single .select2-selection__rendered{font-size: 21px;line-height: 54px;}
+    .date-block .select2-container{height: 55px;}
+    .toggle-content .row.toggle-block .column{padding: 0 15px 40px  15px;border:none}
+    .toggle-content .row.toggle-block h4{font-size: 20px;}
+    .input-with-keypress-0, .input-with-keypress-1{width:51px}
 }
 
 @media(max-width:991px){
@@ -231,6 +280,22 @@
     .right-cost p{font-size: 31px;padding: 0;line-height: 31px;}    
     .cost-block .included h3, .cost-block .not-included h3{font-size: 26px;}  
     .secondary-container{padding:0 23px;}  
+
+/* filter-result
+--------------------------------------------------------------------------------------------------------*/
+    .header .filter-bar{display: block;position: absolute;padding: 5px;right: 23px;border: 1px solid transparent;z-index: 2;top: 50%;transform: translateY(-50%);}
+    .header .filter-bar .bar{background-color: #28afc1;}
+    .header-wrapper.filter-active .header .header-left ul li a{color: #FFFFFF;}
+    .header-wrapper.filter-active .header .login-btn{border: 1px solid #FFFFFF;color: #FFFFFF;}
+    .cause{flex:0 0 100%;max-width: 100%;margin-bottom: 20px;padding: 0;}
+    .cause-inner .custom-control{flex:0 0 33.33%;max-width: 33.33%;}
+    .country{flex:0 0 45%;max-width: 45%;}
+    .more-filter{flex:0 0 10%;max-width: 10%;}
+    .filter-section{margin-top: 95px;}
+    .toggle-content{top:-27px}
+    .filter-wrap{padding: 30px 0;}
+    .filter-content .row .col-md-4{padding: 20px;}
+    .filter-content .row{padding: 0;}
 }
 
 @media(max-width:575px){
@@ -264,13 +329,49 @@
     .right-cost p{margin:0;font-size: 26px;}
     .medical-head h2{font-size: 37px;}
 
-/* Project Page
+/* Contact Page
 --------------------------------------------------------------------------------------------------------*/
     .contact-form{padding-top: 23px;}
     .grid-input .form-group{margin-bottom: 13px;}
     .form-group .input-text{padding:13px 25px;font-size: 23px;}
     .grid-textarea .form-group{margin-bottom: 28px;}
     .grid-textarea .form-group .text-area{min-height: 308px;padding:15px 25px;font-size: 23px;}
+
+/* Filter-result Page
+--------------------------------------------------------------------------------------------------------*/
+    .filter-section{margin-top: 105px;position: relative;}
+    .filter-wrap{padding:25px 0 24px 0;flex-wrap: nowrap;}
+    .edit-content{display: flex;align-items: center;max-width: 403px;padding-right: 22px;border-right: 1px solid #4f4f4f;}
+    .edit-content h3{font-weight: normal;font-size: 19px;color: #28afc1;line-height: 30px;}
+    .edit-content h3 span{font-size: 18px;color:#4f4f4f}
+    .edit-content .edit-icon{width:45px;height: 38px;padding: 10px;border:1px solid #28afc1;border-radius: 5px;}
+    .cause, .country{display: none;}
+    .filter-container{padding:0 19px}
+    .more-filter .text{display: block;}
+    .more-filter .text-dots{display: none;}
+    .more-filter{flex:0 0 111px;max-width: 111px;padding: 6px 6px 6px 5px;font-size: 17px;margin-left: 20px;align-self: center;}
+    .more-filter .filter-badge {top: -16px;right: -16px;width: 31px; height: 29px;line-height: 21px;}
+    .cause{position: absolute;top:110px;left:0;width:100%;z-index: 3;flex:0 0 100%;max-width: 100%;padding:10px 19px;}
+    .country{position: absolute;top:187px;left:0;width:100%;z-index: 3;flex:0 0 100%;max-width: 100%;padding:10px 19px;}
+    .country.activity{top:295px;}
+    .bg-white-block{position: absolute;width:100%;height: 315px;top:110px;left: 0;background-color: #ffffff;z-index: 2;}
+    .bg-overlay{position: absolute;width:100%;height: 6690px;top:110px;left: 0;background-color: #ffffffa6;z-index: 1;}
+    .cause-inner .custom-control{flex:0 0 33.33%;max-width: 33.33%;}
+    .cause-text{font-size: 19px;padding: 0 0 0 6px;}
+    .custom-checkbox .custom-control-label::before, .custom-control-label::after{width:23px;height: 23px;}
+    .filter-heading,.country .filter-heading{margin-bottom: 10px;}
+    .country .select2-container .select2-selection--single .select2-selection__rendered{padding: 12px 30px 12px 17px;font-size: 17px;line-height: 26px;}
+    .country .select2-container{height: 50px;}
+    .toggle-content{top:-215px;height: 680px;width:100%;z-index: 7;}
+    .close-icon{position: absolute;top:-200px;left: 50%;transform: translateX(-50%);width:28px;height: 28px;border-radius: 50%;border:1px solid #8c8c8c;padding: 6px;z-index: 8;background-color: #28afc1;}
+    .toggle-content .row.toggle-block{margin:0;padding-bottom: 0;}
+    .toggle-content .row.toggle-block .column{padding: 0 0 40px 0;}
+    .result-btn{width:100%;margin:0}
+    .date-block .select2-container--default .select2-selection--single .select2-selection__rendered{font-size: 19px;}
+    .toggle-content .row.date-block{padding: 12px 0 0 0;}
+    .toggle-content .row.toggle-block .column{padding-bottom: 30px;}
+    .filter-content .row .col-md-4{padding: 11px 15px 23px 15px;}
+    .filter-content .row{margin:0 -15px;}
 }
 
 @media(max-width:480px){
@@ -321,7 +422,7 @@
     .project-banner{min-height: 383px;}
     .project-banner h1{font-size: 40px;max-width: 300px;text-align: center;}
     .photo-btn{bottom: 25px;right: 26px;padding:7px 22px;}
-    .secondary-container .project-section{padding-top: 50px;}
+    .secondary-container .project-content{padding-top: 50px;}
     .project-left{padding:0;}
     .medical-head{margin-right: 0;margin-bottom: 1px;}
     .medical-head h2{font-size: 36.5px;margin-bottom: 4px;}
@@ -397,6 +498,7 @@
 
 /* Contact Page
 --------------------------------------------------------------------------------------------------------*/
+    
     .contact-banner{min-height: 385px;}
     .contact-text{font-size: 17px;line-height: 29px;margin:0}
     .contact-section{padding:17px 13px 119px 13px;}    
@@ -409,7 +511,23 @@
     .accordian-btn{padding-left: 2px;font-size: 23px;line-height: 33px;padding-right: 52px;}
     .accordian-text{font-size: 17px;padding: 5px 15px;}
     .accordian-btn em .faq-arrow{right: 3px;width:43px;height: 43px;}
+
+/* filter-result Page
+--------------------------------------------------------------------------------------------------------*/
+    .edit-content{max-width: 304px;}
+    .filter-head{padding: 10px 0 12px 0;}
+    .filter-head h2{font-size: 18px;}
+    .sorting .select2-container--default .select2-selection--single .select2-selection__rendered{line-height: 35px;padding-right: 40px;font-size: 18px;}
+    .filter-content .row{padding:0;}
+    .filter-slider .image-wrap{height: 284px;margin-bottom: 16px;}
+    .filter-slider .image-wrap .img-text{padding: 7px 11px 9px 12px;font-size: 13.5px;top:11px;left: 11px;}
+    .filter-slider .slick-arrow{top:124px}
+    .filter-slider .content h3{font-size: 18px;margin-bottom: 6px;}
+    .filter-details p{font-size: 18px;}
+    .filter-slider .content span{font-size: 17px;}
+    .pagination{margin:14px 0;}
 }
+
 
 @media(max-width:400px){
     .banner-content h1{font-size: 31px;}
@@ -445,8 +563,27 @@
     .contact-banner h1{font-size: 31px;}
     .form-group .input-text,.grid-textarea .form-group .text-area{font-size: 20px;padding-left: 15px;padding-right: 15px;}
 
-    /* Contact Page
+/* Faq Page
 --------------------------------------------------------------------------------------------------------*/
     .accordian-btn{font-size: 22px;}
     .accordian-text{font-size: 16px;padding:0 12px}
+
+/* Filter-result Page
+--------------------------------------------------------------------------------------------------------*/
+    .filter-wrap{flex-wrap: wrap;}
+    .edit-content{max-width: 100%;border: none;padding: 0;}
+    .more-filter{margin:20px 0 0 0}
+    .filter-head{padding: 30px 0 15px 0;}
+    .bg-overlay, .bg-white-block{top:170px}
+    .cause{top:175px}
+    .country{top:270px}
+    .country.activity{top:365px}
+    .toggle-content{top:-275px}
+    .close-icon{top: -256px;}
+    .more-filter .filter-badge{top:-12px;right: -12px;width:25px;height: 26px;line-height: 19px;}
+    .filter-head{flex-direction: column;align-items: flex-start;}
+    .filter-head h2{margin-bottom: 15px;}
+    .filter-section{margin-top: 95px;}
+    .filter-container{padding: 0 15px;}
+    .cause-inner .custom-control{flex:0 0 50%;max-width: 50%;}
 }
