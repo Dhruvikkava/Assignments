@@ -214,16 +214,19 @@ $('.filter-slider').slick({
 $(document).ready(function(){
     $("#toggle-btn").click(function(){
       $("#toggle-content").slideToggle();
-      $(".close-icon").toggle();
+      $(".close-icons").toggle();
+      document.body.style.overflow = document.body.style.overflow == 'hidden' ? 'auto' : 'hidden' ;
     });
     $(".toggle-overlay").click(function(){
         $("#toggle-content").slideToggle();
-        $(".close-icon").toggle();
+        $(".close-icons").toggle();
+        document.body.style.overflow = 'auto' ;
     });
-    $(".close-icon").click(function(){
+    $(".close-icons").click(function(){
         $("#toggle-content").slideToggle();
         $(".toggle-overlay").toggle();
-        $(".close-icon").toggle();
+        $(".close-icons").toggle();
+        document.body.style.overflow = 'auto' ;
     });
 });
 $(document).ready(function(){
@@ -236,98 +239,128 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-    var keypressSlider = document.querySelector(".slider-keypress");
-    var input0 = document.querySelector(".input-with-keypress-0");
-    var input1 = document.querySelector(".input-with-keypress-1");
-    var inputs = [input0, input1];
+    var skipSlider = document.getElementById("skipstep");
+    var skipValues = [
+        document.getElementById("skip-value-lower"),
+        document.getElementById("skip-value-upper")
+    ];
 
-    noUiSlider.create(keypressSlider, {
-    start: [1,10],
-    connect: true,
-    step: 1,
-    range: {
-        min: [1],
-        max: [30]
-    }    
+    noUiSlider.create(skipSlider, {
+        start: [1, 11],
+        connect: true,
+        behaviour: "drag",
+        step: 1,
+        range: {
+            min: 1,
+            max: 30
+        },
+        format: {
+            from: function (value) {
+                return parseInt(value);
+            },
+            to: function (value) {
+                return parseInt(value);
+            }
+        }
     });
+
+    skipSlider.noUiSlider.on("update", function (values, handle) {
+        skipValues[handle].innerHTML = values[handle];
+    });
+})
+    // var keypressSlider = document.querySelector(".slider-keypress");
+    // var input0 = document.querySelector(".input-with-keypress-0");
+    // var input1 = document.querySelector(".input-with-keypress-1");
+    // var inputs = [input0, input1];
+
+    // noUiSlider.create(keypressSlider, {
+    // start: [1,10],
+    // connect: true,
+    // step: 1,
+    // range: {
+    //     min: [1],
+    //     max: [30]
+    // }    
+    // });
    
 
-    keypressSlider.noUiSlider.on("update", function(values, handle) {
-        inputs[handle].value = values[handle];
+//     keypressSlider.noUiSlider.on("update", function(values, handle) {
+//         inputs[handle].value = values[handle];
       
-        /* begin Listen to keypress on the input */
-        function setSliderHandle(i, value) {
-          var r = [null, null];
-          r[i] = value;
-          keypressSlider.noUiSlider.set(r);
-        }
+//         /* begin Listen to keypress on the input */
+//         function setSliderHandle(i, value) {
+//           var r = [null, null];
+//           r[i] = value;
+//           keypressSlider.noUiSlider.set(r);
+//         }
       
-        // Listen to keydown events on the input field.
-        inputs.forEach(function(input, handle) {
-          input.addEventListener("change", function() {
-            setSliderHandle(handle, this.value);
-          });
+//         // Listen to keydown events on the input field.
+//         inputs.forEach(function(input, handle) {
+//           input.addEventListener("change", function() {
+//             setSliderHandle(handle, this.value);
+//           });
       
-          input.addEventListener("keydown", function(e) {
-            var values = keypressSlider.noUiSlider.get();
-            var value = Number(values[handle]);
+//           input.addEventListener("keydown", function(e) {
+//             var values = keypressSlider.noUiSlider.get();
+//             var value = Number(values[handle]);
       
-            // [[handle0_down, handle0_up], [handle1_down, handle1_up]]
-            var steps = keypressSlider.noUiSlider.steps();
+//             // [[handle0_down, handle0_up], [handle1_down, handle1_up]]
+//             var steps = keypressSlider.noUiSlider.steps();
       
-            // [down, up]
-            var step = steps[handle];
+//             // [down, up]
+//             var step = steps[handle];
       
-            var position;
+//             var position;
       
-            // 13 is enter,
-            // 38 is key up,
-            // 40 is key down.
-            switch (e.which) {
-              case 13:
-                setSliderHandle(handle, this.value);
-                break;
+//             // 13 is enter,
+//             // 38 is key up,
+//             // 40 is key down.
+//             switch (e.which) {
+//               case 13:
+//                 setSliderHandle(handle, this.value);
+//                 break;
       
-              case 38:
-                // Get step to go increase slider value (up)
-                position = step[1];
+//               case 38:
+//                 // Get step to go increase slider value (up)
+//                 position = step[1];
       
-                // false = no step is set
-                if (position === false) {
-                  position = 1;
-                }
+//                 // false = no step is set
+//                 if (position === false) {
+//                   position = 1;
+//                 }
       
-                // null = edge of slider
-                if (position !== null) {
-                  setSliderHandle(handle, value + position);
-                }
+//                 // null = edge of slider
+//                 if (position !== null) {
+//                   setSliderHandle(handle, value + position);
+//                 }
       
-                break;
+//                 break;
       
-              case 40:
-                position = step[0];
+//               case 40:
+//                 position = step[0];
       
-                if (position === false) {
-                  position = 1;
-                }
+//                 if (position === false) {
+//                   position = 1;
+//                 }
       
-                if (position !== null) {
-                  setSliderHandle(handle, value - position);
-                }
+//                 if (position !== null) {
+//                   setSliderHandle(handle, value - position);
+//                 }
       
-                break;
-            }
-          });
-        });
-        /* end Listen to keypress on the input */
-      });
+//                 break;
+//             }
+//           });
+//         });
+//         /* end Listen to keypress on the input */
+//       });
     
-})
+// })
 
 $(document).ready(function(){
     $(".edit-icon").click(function(){
         $(".cause").slideToggle();
         $(".country").slideToggle();
+        document.body.style.overflow = document.body.style.overflow == 'hidden' ? 'auto' : 'hidden' ;
     });
     $(".edit-icon").click(function(){
         $(".bg-white-block").slideToggle();
@@ -339,6 +372,7 @@ $(document).ready(function(){
     $(".bg-overlay").click(function(){
         $(".cause").slideToggle();
         $(".country").slideToggle();
+        document.body.style.overflow = 'auto';
     });
     $(".bg-overlay").click(function(){
         $(".bg-white-block").slideToggle();

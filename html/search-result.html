@@ -19,7 +19,7 @@
                         <li><a href="./contact.html" title="Contact Us">CONTACT US</a></li>
                     </ul>
                 </div>
-                <input type="button" class="login-btn" value="Login" title="Login">
+                <input type="button" class="login-btn btn-outline" value="Login" title="Login">
                 <div class="filter-bar bars " onclick="document.body.classList.toggle('navbar-toggle')">
                     <div class="bar"></div>
                     <div class="bar"></div>
@@ -198,8 +198,8 @@
                                 <h3>Duration</h3>
                                 <a href="#" title="Reset">Reset</a>
                             </div>
-                            <h4 class="slider-range-value"><input type="text" class="input-with-keypress-0">week - <input type="text" class="input-with-keypress-1">weeks</h4>
-                            <div class="slider-keypress"></div>                          
+                            <h4 class="slider-range-value"><span id="skip-value-lower"></span>week - <span id="skip-value-upper"></span>weeks</h4>
+                            <div id="skipstep" class="range-slider"></div>                          
                         </div>
 
                         <div class="col-xl-4 col-md-12 column">
@@ -227,7 +227,7 @@
                 </div>        
             </div>
             <div class="toggle-overlay"></div>
-            <span class="close-icon"><img src="./images/cross.png" alt="cross-image"></span> 
+            <span class="close-icons"><img src="./images/cross.png" alt="cross-image"></span> 
             <!-- toggle-content end -->         
 
             <div class="filter-head">
