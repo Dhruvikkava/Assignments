@@ -327,3 +327,4 @@ $('.modal').on('shown.bs.modal', function (e) {
     })
 })
 })
+$('#exampleModalCenter').appendTo("body").modal('hide');
