@@ -295,3 +295,35 @@ $(document).ready(function(){
         $(".bg-overlay").toggle();
     });
 });
+
+
+// Model 
+
+$(document).ready(function(){
+$('.modal').on('shown.bs.modal', function (e) {
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite:false,
+        fade: true,
+        asNavFor: '.slider-navigation',
+        prevArrow: '<div class="slick-prev control-c"><img src="./images/left-arrow-big.png"></div>',
+        nextArrow: '<div class="slick-next control-c"><img src="./images/left-arrow-big.png"></div>'
+    });
+    $('.slider-navigation').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        focusOnSelect: true,
+        arrows: false,       
+        responsive: [
+            {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 3,
+            }
+            },
+        ]
+    })
+})
+})

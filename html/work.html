@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Volunteer Overseas | How It Works?</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="icon" href="./images/logo.png">
 </head>
 <body>
     <div class="wrap">
@@ -39,10 +40,29 @@
                         <p>Volunteers, interns, and ESL teachers are solving problems and making a real difference abroad. Finding the perfect program you can trust shouldn't be a program.</p>
                     </div>
                     <div class="right-block">
-                        <button class="play-btn btn" title="Watch the tour">
+                        <button class="play-btn btn" title="Watch the tour" data-toggle="modal" data-target="#exampleModal">
                             <span class="play-image"><img src="./images/play-button-svgrepo-com.svg" alt="play-btn"></span>
                             <p>Watch the tour</p>
                         </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                            <div class="modal-content video-modal">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="video">
+                                        <video controls autoplay>
+                                            <source src="./images/video.mp4" type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>                                
+                            </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

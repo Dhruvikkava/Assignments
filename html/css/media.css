@@ -44,6 +44,11 @@
 --------------------------------------------------------------------------------------------------------*/
     .other-project .a-right{right: -10px;}
 
+/* Project Page
+--------------------------------------------------------------------------------------------------------*/
+    .slider-for .slick-next{right: -60px;}
+    .slider-for .slick-prev{left: -60px;}
+
 /* filter-result Page
 --------------------------------------------------------------------------------------------------------*/
     
@@ -222,6 +227,8 @@
     .project-right .apply-btn:focus{outline: none;}
     .up-arrow-rotate{transform:rotate(180deg);}
     .org{border:none;padding-bottom: 49px;}
+    .slider-for .slick-next{right: 10px;}
+    .slider-for .slick-prev{left: 10px;}
 
 /* Contact Page 
 --------------------------------------------------------------------------------------------------------*/
@@ -457,6 +464,9 @@
     .project-banner h1{max-width: 480px;text-align: center;}
     .right-cost p{margin:0;font-size: 26px;}
     .medical-head h2{font-size: 37px;}
+    .modal-dialog-centered{margin:20px;max-width: 100%;}
+    .modal-dialog-centered .close{display: block;font-size: 30px;}
+    .date-modal-body{padding: 20px 16px;}
 
 /* Contact Page
 --------------------------------------------------------------------------------------------------------*/
